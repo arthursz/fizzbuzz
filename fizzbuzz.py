@@ -1,4 +1,4 @@
-from unittest import TestCase
+import unittest
 
 
 def fizzbuzz(numbers):
@@ -17,7 +17,7 @@ def fizzbuzz(numbers):
 
     return fizzbuzz
 
-class TestFizzbuzz(TestCase):
+class TestFizzbuzz(unittest.TestCase):
 
     def test_fizzbuzz(self):
         self.assertEqual(fizzbuzz([15]), ['fizzbuzz'])
@@ -33,3 +33,6 @@ class TestFizzbuzz(TestCase):
 
     def test_number(self):
         self.assertEqual(fizzbuzz([1]), [1])
+
+if __name__ == '__main__':
+    unittest.main()
